@@ -5,7 +5,7 @@ import { Center } from "@repo/ui/Center";
 import { Select } from "@repo/ui/Select";
 import { useState } from "react";
 import { TextInput } from "@repo/ui/TextInput";
-import { createOnrampTransactions } from "../app/lib/actions/createOnrampTransactions";
+import { createOnRampTransaction } from "../app/lib/actions/createOnrampTransaction";
 
 const SUPPORTED_BANKS = [
   {
@@ -22,8 +22,8 @@ export const AddMoney = () => {
   const [redirectUrl, setRedirectUrl] = useState(
     SUPPORTED_BANKS[0]?.redirectUrl
   );
-  const [amount, setAmount] = useState("");
-  const [provider, setProvider] = useState(SUPPORTED_BANKS[0]?.name);
+  const [amount, setAmount] = useState(0);
+  const [provider, setProvider] = useState(SUPPORTED_BANKS[0]?.name || "");
   return (
     <Card title="Add Money">
       <div className="w-full">
@@ -31,7 +31,7 @@ export const AddMoney = () => {
           label={"Amount"}
           placeholder={"Amount"}
           onChange={(value) => {
-            setAmount(value);
+            setAmount(Number(value));
           }}
         />
         <div className="py-4 text-left">Bank</div>
@@ -52,7 +52,7 @@ export const AddMoney = () => {
         <div className="flex justify-center pt-4">
           <Button
             onClick={async () => {
-              await createOnrampTransactions(amount, provider);
+              await createOnRampTransaction(amount, provider);
             }}
           >
             Add Money
