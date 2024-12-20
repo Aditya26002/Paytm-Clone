@@ -1,81 +1,80 @@
-# Turborepo starter
+# Paytm Wallet Project
 
-This is an official starter Turborepo.
+## Overview
 
-## Using this example
+This project is a full-stack payment application that enables seamless peer-to-peer (P2P) money transfers. It is built using Next.js and Tailwind CSS for the frontend, and Prisma ORM for managing backend processes. The application ensures secure and efficient transactions with robust authentication and real-time updates.
 
-Run the following command:
+## Features
 
-```sh
-npx create-turbo@latest
-```
+1. **Responsive Frontend**: Built using Next.js and Tailwind CSS for a visually engaging, responsive user experience across devices.
+2. **Backend Management**: Managed user balances and transactions via Prisma ORM, ensuring data integrity and consistency.
+3. **P2P Money Transfers**: Developed a seamless peer-to-peer money transfer feature, allowing users to transfer funds securely and efficiently.
+4. **Secure Authentication**: Integrated NextAuth.js for secure user authentication, enabling users to manage their accounts and transaction history.
+5. **Real-time Updates**: Enhanced user experience with real-time updates and notifications using Express.js for handling webhooks.
+6. **Continuous Improvement**: Committed to consistently applying new skills to update and enhance functionality and user experience.
 
-## What's inside?
+## Installation
 
-This Turborepo includes the following packages/apps:
+1. Clone the repository:
 
-### Apps and Packages
+   ```sh
+   git clone https://github.com/yourusername/paytm-wallet.git
+   cd paytm-wallet
+   ```
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+2. Install dependencies:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+   ```sh
+   npm install
+   ```
 
-### Utilities
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the necessary environment variables:
 
-This Turborepo has some additional tools already setup for you:
+   ```env
+   DATABASE_URL=your_database_url
+   NEXTAUTH_URL=your_nextauth_url
+   NEXTAUTH_SECRET=your_nextauth_secret
+   ```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+4. Run the development server:
 
-### Build
+   ```sh
+   npm run dev
+   ```
 
-To build all apps and packages, run the following command:
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-cd my-turborepo
-pnpm build
-```
+## Usage
 
-### Develop
+1. Register or log in to your account.
+2. Add funds to your wallet.
+3. Transfer funds to other users securely and efficiently.
+4. View your transaction history and manage your account settings.
 
-To develop all apps and packages, run the following command:
+## Technologies Used
 
-```
-cd my-turborepo
-pnpm dev
-```
+- **Frontend**: Next.js, Tailwind CSS
+- **Backend**: Prisma ORM, Express.js
+- **Authentication**: NextAuth.js
+- **Database**: PostgreSQL (or your preferred database)
 
-### Remote Caching
+## Contributing
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+## License
 
-```
-cd my-turborepo
-npx turbo login
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Acknowledgements
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Express.js](https://expressjs.com/)
